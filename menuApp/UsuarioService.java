@@ -11,7 +11,7 @@ public class UsuarioService {
 		usuarios = new ArrayList<>();
 		
 	}
-	public void CadastrarUsuario(String nome) {
+	public void cadastrarUsuario(String nome) {
 		if (nome == null || nome.trim().isEmpty()) {
 			System.out.println("Nome inválido| Não foi possivel cadastrar.");
 			return;
@@ -26,7 +26,7 @@ public class UsuarioService {
 		} else {
 			System.out.println("Lista de usuários:");
 			for (int i = 0; i < usuarios.size(); i++) {
-				System.out.println((i + 1) + ", " + usuarios.get(i)););
+				System.out.println((i + 1) + ", " + usuarios.get(i));
 			}
 		}
 	}
