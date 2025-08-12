@@ -9,7 +9,7 @@ public class Cliente {
 	
 	public Cliente(String nome, String email) {
 		this.nome = nome;
-		this.email =email;
+		this.email = email;
 	}
 	
 	public Cliente(int id, String nome, String email) {

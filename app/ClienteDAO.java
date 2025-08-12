@@ -27,7 +27,7 @@ public class ClienteDAO {
 
 	public List<Cliente> listarClientes() {
 		List<Cliente> lista = new ArrayList<>();
-		String sql = "SELECT FROM clientes";
+		String sql = "SELECT * FROM clientes";
 		
 		try (Connection conn = Conexao.getConnection();
 				PreparedStatement stmt = conn.prepareStatement(sql);
