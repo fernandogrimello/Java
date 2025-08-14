@@ -1,3 +1,3 @@
-module SistemaClientes {
+module LoginApp {
 	requires java.sql;
 }

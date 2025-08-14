@@ -1,20 +1,26 @@
-package app;
+package br.com.loginapp;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Conexao {
-	private static final String URL = "jdbc:mysql://localhost:3307/sistema_clientes";
-	private static final String USER = "root";
-	private static final String PASSWORD = "senac";
+
+	private static final String URL = "jdbc:mysql://localhost:3307/sistema_login";
+	private static final String USUARIO = "root";
+	private static final String SENHA = "senac";
 	
-	public static Connection getConnection() {
+	public static Connection conectar() {
+		Connection conexao = null;
 		try {
-			return DriverManager.getConnection(URL, USER, PASSWORD);
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			conexao = DriverManager.getConnection(URL, USUARIO, SENHA);
+			System.out.println("Conectado ao banco de dados!");
+		} catch (ClassNotFoundException e) {
+			System.out.println("Driver JDBC não encontrado: " + e.getMessage());
 		} catch (SQLException e) {
-			e.printStackTrace();
-			return null;
+			System.out.println("Erro ao conectar: " + e.getMessage());
 		}
+		return conexao;
 	}
 }
