@@ -1,3 +1,3 @@
-module LoginApp {
-	requires java.sql;
-}
+module SistemaComercial {
+	requires java.desktop;
+} 
